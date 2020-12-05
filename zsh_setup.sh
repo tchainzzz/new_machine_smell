@@ -5,13 +5,14 @@ if [[ -z "$1" ]]; then
 fi
 
 export CONDA_HOME=$1
-if [[-d "$CONDA_HOME"]]; then
+if [! -d "$CONDA_HOME"]; then
     echo "Invalid directory passed as \$CONDA_HOME: $CONDA_HOME does not exist."
     unset CONDA_HOME
     exit 1
 fi
 
 cp .zshrc ~
+source ~/.zshrc
 git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k

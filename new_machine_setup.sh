@@ -7,8 +7,11 @@ if [ ! -d ".ssh" ]; then
     exit 1
 fi
 
-cp .ssh ~
+cp -r .ssh ~
 chmod 600 ~/.ssh/id_rsa
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+ssh-add -l -E sha256
 
 
 
