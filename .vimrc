@@ -22,7 +22,7 @@ Plugin 'vim-airline/vim-airline-themes'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#bufferline#enabled = 1
-let g:airline_theme = 'luna'
+let g:airline_theme = 'violet'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#show_buffers = 1 
 let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
@@ -64,9 +64,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'yggdroot/indentline'
 let g:indentLine_color_term = 59
-Plugin 'preservim/nerdtree'
-nnoremap tree :NERDTreeToggle
-nnoremap <space> za
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
