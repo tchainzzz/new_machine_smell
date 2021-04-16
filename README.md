@@ -24,10 +24,13 @@ These should come with most modern Ubuntu installations.
 
 ## Scripts
 
-* `conda_time.sh` - pull and install [Miniconda](https://docs.conda.io/en/latest/miniconda.html#linux-installers).
+Mostly in the order you should run them.
+
 * `github_setup.sh` - copy SSH keys from `.ssh` folder of this repo, set permissions, and add identity. Does **not** take care of key creation, which is covered [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). DO NOT COMMIT YOUR SSH KEYS PUBLICLY, PLEASE. I stored my keys in a folder on my private EFS.
 * `new_machine_setup.sh` - installs a bunch of Vim plugins, sets Vim and Tmux configuration, and installs `zsh` and `oh-my-zsh`.
 * `zsh_setup.sh` - installs [Powerlevel10K](https://github.com/romkatv/powerlevel10k) theme, as well as the [zsh-z](https://github.com/agkozak/zsh-z) and [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) plugins.
+* `conda_time.sh` - pull and install [Miniconda](https://docs.conda.io/en/latest/miniconda.html#linux-installers).
+
 * `zsh_setup_with_conda.sh` - same as above, but also links to an existing [Conda](https://docs.conda.io/en/latest/index.html) installation. Useful if you are using EFS or some persistent file storage service.
 
 ## Files
